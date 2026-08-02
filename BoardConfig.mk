@@ -100,9 +100,9 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_SUPER_PARTITION_GROUPS := unisoc_a unisoc_b
 BOARD_UNISOC_A_SIZE := 8384413696
-BOARD_UNISOC_A_PARTITION_LIST := system system_ext vendor odm product vendor_dlkm system_dlkm
+BOARD_UNISOC_A_PARTITION_LIST := system system_ext vendor odm product vendor_dlkm 
 BOARD_UNISOC_B_SIZE := 8384413696
-BOARD_UNISOC_B_PARTITION_LIST := system system_ext vendor odm product vendor_dlkm system_dlkm
+BOARD_UNISOC_B_PARTITION_LIST := system system_ext vendor odm product vendor_dlkm 
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
