@@ -2,7 +2,11 @@ system                                   /system             erofs    ro wait,av
 system_ext                               /system_ext         erofs    ro wait,logical,first_stage_mount,slotselect
 vendor                                   /vendor             erofs    ro wait,avb=vbmeta_vendor,logical,first_stage_mount,slotselect
 product                                  /product            erofs    ro wait,avb=vbmeta_product,logical,first_stage_mount,slotselect
+odm                                      /odm                erofs    ro wait,avb=vbmeta_odm,logical,first_stage_mount,slotselect
+vendor_dlkm                              /vendor_dlkm         erofs    ro wait,avb=vbmeta_system_ext,logical,first_stage_mount,slotselect
+system_dlkm                              /system_dlkm         erofs    ro wait,avb=vbmeta_system_ext,logical,first_stage_mount,slotselect
+/dev/block/by-name/userdata              /data               f2fs     defaults     defaults,fileencryption=aes-256-xts
 
 /dev/block/by-name/misc                  /misc               emmc     defaults     defaults
 
-/dev/block/mmcblk1p1                     /external_sd        auto    defaults     defaults,check
+/dev/block/mmcblk1p1                     /external_sd        auto    defaults     defaults

@@ -6,3 +6,4 @@ on boot
     start health-hal-2-1
     insmod /lib/modules/sc27xx_tsensor_thermal.ko
     insmod /lib/modules/thermal-generic-adc.ko
+    insmod /lib/modules/sc27xx-vibra.ko
