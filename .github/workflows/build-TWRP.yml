@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/Kyros70/android_device_realme_RMX3830_recovery'
+        default: 'https://github.com/rmx3830ussi/android_device_realme_RMX3830_recovery'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -109,8 +109,8 @@ jobs:
         mkdir workspace
         cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
-        git config --global user.name "Nico170420"
-        git config --global user.email "b170420nc@gmail.com"
+        git config --global user.name "RMX3830ussi"
+        git config --global user.email "matrixmod2026@outlook.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
 
@@ -164,11 +164,11 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: | 
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*vendor*.img
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.img
-          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/vendor_boot.img
+          workspace/out/target/product/ussi_arm64/${{ github.event.inputs.BUILD_TARGET }}.img
+          workspace/out/target/product/ussi_arm64/*.zip
+          workspace/out/target/product/ussi_arm64/*vendor*.img
+          workspace/out/target/product/ussi_arm64/*.img
+          workspace/out/target/product/ussi_arm64/vendor_boot.img
         name: ${{ github.event.inputs.DEVICE_NAME }}-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         body: |
